@@ -1,1 +1,1 @@
-NonStopTalk - Chat em tempo real usando websocket
+(SOCKET) NonStopTalk - Chat em tempo real usando websocket
