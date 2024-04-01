@@ -8,7 +8,9 @@ const port = process.env.PORT || 8000;
 const io = new Server({ cors: process.env.CORS_ORIGIN });
 
 io.on('connection', (socket) => {
-  console.log('a user connected', socket.id);
+  socket.on('update chat', (chatId, user1Id, user2Id) => {
+    io.emit('update chat', chatId, user1Id, user2Id);
+  });
 });
 
 io.listen(port);
